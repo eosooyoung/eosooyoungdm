@@ -12,7 +12,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print("봇실행이 시작되었습니다(24시간 온라인).")
-    game = discord.Game('DM봇테스트')
+    game = discord.Game('디엠봇테스트')
     await client.change_presence(status=discord.Status.online, activity=game)
 
 #/dm {할말}로 전체DM 전송
@@ -27,7 +27,7 @@ async def on_message(message):
                     msg = message.content[4:]
                     if message.author.id == 546485207516184589!!:
                         embed = discord.Embed(colour=0x1DDB16, timestamp=message.created_at, title="DM봇공지")
-                        embed.add_field(name="test", value=msg, inline=True)
+                        embed.add_field(name="테스트중", value=msg, inline=True)
                         embed.set_footer(text=f"https://discord.gg/uecWPY72a9")
                         await i.send(embed=embed)
                 except:
